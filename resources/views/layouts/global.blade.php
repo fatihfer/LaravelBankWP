@@ -48,7 +48,7 @@
           <ul class="nav navbar-nav">
 		  	    <li><a href="{{url('home')}}">Dashboard</a></li>
             <li><a href="{{Route('kriteria.index')}}">Kriteria</a></li>
-            <li><a href="{{Route('kandidat.index')}}">Bank</a></li>
+            <li><a href="{{Route('bank.index')}}">Bank</a></li>
             <li><a href="{{url('nilai')}}">Penilaian</a></li>
           </ul>
         </div>
