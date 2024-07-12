@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kandidat extends Model
+class bank extends Model
 {
-    protected $table = 'kandidats';
+    protected $table = 'banks';
     protected $fillable = [
         'nama',
         'alamat',
@@ -17,6 +17,6 @@ class Kandidat extends Model
     ];
 
     public function nilai(){
-        return $this->hasMany('App\Nilai','kandidat_id','id');
+        return $this->hasMany('App\Nilai','bank_id','id');
     }
 }

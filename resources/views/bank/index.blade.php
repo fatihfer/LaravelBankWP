@@ -32,23 +32,23 @@
                 </thead>
 
                 <tbody>
-                    @foreach ($kandidats as $no=>$kandidat)
+                    @foreach ($banks as $no=>$bank)
                         <tr>
                             <td>{{$no + 1}}</td>
-                            <td>{{$kandidat->nama}}</td>
-                            <td>{{($kandidat->jk == 'Swasta') ? 'SWASTA' : 'BUMN'}}</td>
-                            <td>{{$kandidat->telp}}</td>
+                            <td>{{$bank->nama}}</td>
+                            <td>{{($bank->jk == 'Swasta') ? 'SWASTA' : 'BUMN'}}</td>
+                            <td>{{$bank->telp}}</td>
 
                             <td>
-                                <a  class="btn btn-info text-white btn-sm" href="{{route('kandidat.show',$kandidat->id)}}" data-toggle="tooltip" data-placement="bottom" title="lihat data"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a  class="btn btn-warning text-white btn-sm" href="{{route('kandidat.edit',$kandidat->id)}}" data-toggle="tooltip" data-placement="bottom" title="ubah data"><span class="glyphicon glyphicon-pencil"></span></a>
-                                <form id="delete-form-{{ $kandidat->id }}" action="{{ route('kandidat.destroy',$kandidat->id) }}" style="display: none;" method="POST">
+                                <a  class="btn btn-info text-white btn-sm" href="{{route('bank.show',$bank->id)}}" data-toggle="tooltip" data-placement="bottom" title="lihat data"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a  class="btn btn-warning text-white btn-sm" href="{{route('bank.edit',$bank->id)}}" data-toggle="tooltip" data-placement="bottom" title="ubah data"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <form id="delete-form-{{ $bank->id }}" action="{{ route('bank.destroy',$bank->id) }}" style="display: none;" method="POST">
                                     @csrf
                                     @method('DELETE')
                                 </form>
                                 <button data-toggle="tooltip" data-placement="bottom" title="hapus data" type="button" class="btn btn-danger text-white btn-sm" onclick="if(confirm('Apakah anda yakin ingin menghapus data ini?')){
                                     event.preventDefault();
-                                    document.getElementById('delete-form-{{ $kandidat->id }}').submit();
+                                    document.getElementById('delete-form-{{ $bank->id }}').submit();
                                 }else {
                                     event.preventDefault();
                                         }"><span class="glyphicon glyphicon-trash"></span></button>
@@ -59,7 +59,7 @@
                 </tbody>
             </table>
           </div>
-              <a href="{{ route('kandidat.create') }}" class="margin-bottom-2 btn btn-success btn-sm btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Bank</a>
+              <a href="{{ route('bank.create') }}" class="margin-bottom-2 btn btn-success btn-sm btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Bank</a>
             
           </div>
           <!-- /.box-body -->

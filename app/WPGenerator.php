@@ -18,7 +18,7 @@ class WPGenerator
         }
 
 
-        $nilai = Nilai::orderBy('kandidat_id')->get();
+        $nilai = Nilai::orderBy('bank_id')->get();
         $penerima = null;
         $s = [];
 
@@ -27,7 +27,7 @@ class WPGenerator
         $hit = 0;
         $len = count($nilai);
         foreach ($nilai as $n) {
-            if($penerima!=$n->kandidat_id){
+            if($penerima!=$n->bank_id){
                 if($penerima!=null){
                     $tmp = [];
                     $tmp['s'] = $tmp_s;
@@ -35,7 +35,7 @@ class WPGenerator
                     array_push($s,$tmp);
                 }
 
-                $penerima = $n->kandidat_id;
+                $penerima = $n->bank_id;
                 $tmp_s = 1;
             }
 

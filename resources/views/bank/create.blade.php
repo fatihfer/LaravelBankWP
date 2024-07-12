@@ -8,7 +8,7 @@
     </h1>
     <ol class="breadcrumb">
       <li><a href="{{url('home')}}"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="{{Route('kandidat.index')}}">Data Bank</a></li>
+      <li><a href="{{Route('bank.index')}}">Data Bank</a></li>
       <li class="active">Tambah Bank</li>
     </ol>
   </section>
@@ -21,7 +21,7 @@
         <div class="box box-success">
             <!-- form start -->
             <form enctype="multipart/form-data" class="bg-white shadow-sm p-3"
-            action="{{route('kandidat.store')}}" method="POST">
+            action="{{route('bank.store')}}" method="POST">
             @csrf
               <div class="box-body">
                 <div class="form-group">
