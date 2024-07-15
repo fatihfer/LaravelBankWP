@@ -59,7 +59,7 @@
                 </tbody>
             </table>
           </div>
-              <a href="{{ route('bank.create') }}" class="margin-bottom-2 btn btn-success btn-sm btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Bank</a>
+              <a href="{{ route('kandidat.create') }}" class="margin-bottom-2 btn btn-success btn-sm btn-rounded btn-fw"><i class="fa fa-plus"></i> Tambah Bank</a>
             
           </div>
           <!-- /.box-body -->

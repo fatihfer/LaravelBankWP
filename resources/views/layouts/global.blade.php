@@ -37,7 +37,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="{{url('home')}}" class="navbar-brand"><b>Rek</b>Bank</a>
+          <a href="{{url('home')}}" class="navbar-brand"><b>Rek</b>kandidat</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -48,7 +48,7 @@
           <ul class="nav navbar-nav">
 		  	    <li><a href="{{url('home')}}">Dashboard</a></li>
             <li><a href="{{Route('kriteria.index')}}">Kriteria</a></li>
-            <li><a href="{{Route('bank.index')}}">Bank</a></li>
+            <li><a href="{{Route('kandidat.index')}}">Bank</a></li>
             <li><a href="{{url('nilai')}}">Penilaian</a></li>
           </ul>
         </div>
